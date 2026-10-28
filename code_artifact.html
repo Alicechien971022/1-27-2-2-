@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本大阪 7 天 6 夜之旅 2027</title>
+  <!-- Google Fonts: Huninn (粉圓體) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* 淺色模式｜和紙繪本 */
+      --bg-main: #FFFCF6;
+      --card-bg: #FFFFFF;
+      --border-color: #3E3A39;
+      --text-main: #3E3A39;
+      --text-muted: #6B6560;
+      --primary-coral: #F2A497;
+      --primary-yellow: #F6D27A;
+      --primary-blue: #A8D3E6;
+      --primary-green: #B9DAA5;
+      --badge-bg: #F0ECE1;
+      --modal-overlay: rgba(62, 58, 57, 0.5);
+      --shadow: 3px 3px 0px var(--border-color);
+      --font-family: 'Zen Maru Gothic', 'Huninn', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html.dark {
+      /* 深色模式｜大地夜色 */
+      --bg-main: #292923;
+      --card-bg: #494336;
+      --border-color: #8D806D;
+      --text-main: #F7F1E7;
+      --text-muted: #C5BCAD;
+      --primary-coral: #D6A094;
+      --primary-yellow: #E1BE78;
+      --primary-blue: #A5BCB4;
+      --primary-green: #B1BE91;
+      --badge-bg: #383329;
+      --modal-overlay: rgba(20, 19, 16, 0.75);
+      --shadow: 3px 3px 0px var(--border-color);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.6;
+      padding-top: 70px;
+      padding-bottom: 40px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    /* 頂端固定導覽列 */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: var(--card-bg);
+      border-bottom: 3px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+      margin-right: 8px;
+      scrollbar-width: none;
+    }
+    .nav-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-btn {
+      background: none;
+      border: 2px solid transparent;
+      padding: 6px 12px;
+      border-radius: 18px;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-right: 4px;
+      flex-shrink: 0;
+    }
+
+    .nav-btn.active {
+      background-color: var(--primary-yellow);
+      border-color: var(--border-color);
+      box-shadow: 2px 2px 0px var(--border-color);
+    }
+
+    .theme-toggle-btn {
+      background: var(--badge-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      box-shadow: 2px 2px 0px var(--border-color);
+    }
+
+    /* 主容器 */
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .page {
+      display: none;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 大圓角繪本卡片 */
+    .card {
+      background-color: var(--card-bg);
+      border: 3px solid var(--border-color);
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      word-break: break-word;
+    }
+
+    /* 按鈕樣式 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-coral);
+      color: var(--border-color);
+      font-family: var(--font-family);
+      font-weight: 700;
+      padding: 10px 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 14px;
+      box-shadow: 2px 2px 0px var(--border-color);
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      gap: 6px;
+    }
+
+    .btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0px var(--border-color);
+    }
+
+    .btn-secondary { background-color: var(--primary-blue); }
+    .btn-accent { background-color: var(--primary-yellow); }
+    .btn-green { background-color: var(--primary-green); }
+    .btn-danger { background-color: #F87171; color: #FFF; }
+    .btn-sm { padding: 5px 10px; font-size: 0.8rem; border-radius: 10px; }
+
+    /* 標籤 */
+    .tag {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border-color);
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+    .tag-transit { background-color: var(--primary-blue); color: #222; }
+    .tag-spot { background-color: var(--primary-yellow); color: #222; }
+    .tag-food { background-color: var(--primary-coral); color: #222; }
+    .tag-must { background-color: var(--primary-green); color: #222; }
+
+    /* 首頁樣式 */
+    .home-hero {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .home-svg {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      margin: 10px auto;
+      display: block;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .cloud-anim {
+        animation: floatCloud 6s ease-in-out infinite alternate;
+      }
+      .train-anim {
+        animation: shakeTrain 0.8s ease-in-out infinite alternate;
+      }
+    }
+
+    @keyframes floatCloud {
+      0% { transform: translateX(-8px); }
+      100% { transform: translateX(8px); }
+    }
+
+    @keyframes shakeTrain {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-2px); }
+    }
+
+    .countdown-box {
+      background-color: var(--badge-bg);
+      border: 2px dashed var(--border-color);
+      border-radius: 16px;
+      padding: 12px;
+      margin: 16px 0;
+      text-align: center;
+    }
+
+    .countdown-num {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary-coral);
+    }
+
+    /* 每日行程時間軸 */
+    .day-selector {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      scrollbar-width: none;
+    }
+    .day-selector::-webkit-scrollbar { display: none; }
+
+    .day-btn {
+      flex: 0 0 auto;
+      background: var(--card-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      box-shadow: 2px 2px 0px var(--border-color);
+      color: var(--text-main);
+    }
+
+    .day-btn.active {
+      background: var(--primary-coral);
+      transform: scale(1.03);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 24px;
+      border-left: 3px dashed var(--border-color);
+      margin-left: 12px;
+      padding-bottom: 24px;
+    }
+
+    .timeline-item:last-child {
+      border-left: 3px transparent;
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--primary-yellow);
+      border: 2px solid var(--border-color);
+    }
+
+    .timeline-time {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--primary-coral);
+      margin-bottom: 4px;
+    }
+
+    .timeline-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    /* 分類切換 (備用資料庫) */
+    .sub-tabs {
+      display: flex;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 16px;
+    }
+
+    .sub-tab-btn {
+      flex: 1;
+      padding: 10px;
+      background: none;
+      border: none;
+      font-family: var(--font-family);
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 4px solid transparent;
+    }
+
+    .sub-tab-btn.active {
+      color: var(--text-main);
+      border-bottom-color: var(--primary-coral);
+    }
+
+    /* 表單樣式 */
+    .form-group {
+      margin-bottom: 12px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-family: var(--font-family);
+      background: var(--bg-main);
+      color: var(--text-main);
+      box-sizing: border-box;
+    }
+
+    /* 彈出視窗 (Modal) */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--modal-overlay);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      padding: 16px;
+    }
+
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-content {
+      background-color: var(--card-bg);
+      border: 3px solid var(--border-color);
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 20px;
+      box-shadow: 4px 4px 0px var(--border-color);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--badge-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    /* 待辦清單項目 */
+    .todo-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+    .todo-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      accent-color: var(--primary-coral);
+    }
+    .todo-item.completed span {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    /* 記帳統計卡片 */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .stat-card {
+      background: var(--badge-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+    }
+    .stat-val {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--primary-coral);
+    }
+
+    /* Toast 提示條 */
+    #toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--border-color);
+      color: #FFF;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 700;
+      z-index: 3000;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    #toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .text-muted { color: var(--text-muted); font-size: 0.85rem; }
+    .flex-between { display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+
+  <!-- 固定頂端導覽列 -->
+  <header>
+    <div class="nav-container" id="navContainer">
+      <button class="nav-btn active" onclick="switchPage('home')">首頁</button>
+      <button class="nav-btn" onclick="switchPage('flight')">航班</button>
+      <button class="nav-btn" onclick="switchPage('itinerary')">每日行程</button>
+      <button class="nav-btn" onclick="switchPage('backup')">備用資料</button>
+      <button class="nav-btn" onclick="switchPage('accounting')">記帳</button>
+      <button class="nav-btn" onclick="switchPage('hotel')">住宿</button>
+      <button class="nav-btn" onclick="switchPage('todo')">待辦清單</button>
+    </div>
+    <button class="theme-toggle-btn" id="themeToggle" onclick="toggleTheme()" aria-label="切換主題">
+      <span id="themeIcon">☀️</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- 1. 首頁 -->
+    <section id="page-home" class="page active">
+      <div class="card home-hero">
+        <svg class="home-svg" viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cloud-anim" d="M30 40 C30 30, 50 30, 60 40 C70 30, 90 30, 90 40 C100 40, 100 55, 90 60 C90 65, 30 65, 30 40 Z" fill="#E8F4F8" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+          <path class="cloud-anim" d="M200 30 C200 23, 215 23, 222 30 C230 23, 245 23, 245 30 C252 30, 252 42, 245 45 C245 50, 200 50, 200 30 Z" fill="#E8F4F8" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round" style="animation-delay: -3s;"/>
+          <polygon points="150,50 210,130 90,130" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+          <polygon points="150,50 165,70 150,65 135,70" fill="#FFFFFF"/>
+          <rect x="120" y="100" width="60" height="30" fill="#F6D27A" stroke="#3E3A39" stroke-width="3"/>
+          <path d="M110 100 L150 80 L190 100 Z" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="135" y="85" width="30" height="15" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/>
+          <path d="M130 85 L150 70 L170 85 Z" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="10" y="130" width="280" height="12" rx="6" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/>
+          <g class="train-anim">
+            <rect x="40" y="120" width="60" height="22" rx="5" fill="#FFFFFF" stroke="#3E3A39" stroke-width="3"/>
+            <rect x="48" y="125" width="12" height="8" rx="2" fill="#A8D3E6" stroke="#3E3A39" stroke-width="2"/>
+            <rect x="66" y="125" width="12" height="8" rx="2" fill="#A8D3E6" stroke="#3E3A39" stroke-width="2"/>
+            <circle cx="52" cy="142" r="3" fill="#3E3A39"/>
+            <circle cx="88" cy="142" r="3" fill="#3E3A39"/>
+          </g>
+          <circle cx="250" cy="80" r="6" fill="#F2A497" stroke="#3E3A39" stroke-width="2"/>
+          <circle cx="262" cy="92" r="4" fill="#F2A497" stroke="#3E3A39" stroke-width="2"/>
+        </svg>
+
+        <h1 style="font-size: 1.6rem; margin-top: 10px;">🇯🇵 日本大阪關西之旅</h1>
+        <p class="text-muted" style="margin-top: 4px;">目的地：大阪・京都・神戶自由行</p>
+        
+        <div class="countdown-box">
+          <div style="font-size: 0.85rem; font-weight: 700;">距離出發還有</div>
+          <div class="countdown-num" id="countdown">-- 天</div>
+          <div class="text-muted">2027/01/27 - 2027/02/02 (7天6夜)</div>
+        </div>
+
+        <div style="text-align: left; background: var(--badge-bg); padding: 12px; border-radius: 12px; border: 2px solid var(--border-color); font-size: 0.9rem;">
+          <p>👥 <b>旅行人數：</b> 9 人團體行</p>
+          <p>🏨 <b>主要住宿：</b> Hotel Story@Namba by Tabist</p>
+          <p>✈️ <b>搭乘航班：</b> 亞洲航空 (AirAsia)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 航班資訊 -->
+    <section id="page-flight" class="page">
+      <h2 style="margin-bottom: 12px;">✈️ 航班資訊</h2>
+      <div class="card">
+        <div class="flex-between" style="margin-bottom: 8px;">
+          <span class="tag tag-must">去程航班</span>
+          <span style="font-weight: 700;">2027/01/27 (三)</span>
+        </div>
+        <h3 style="font-size: 1.2rem;">亞洲航空 AirAsia (AK170)</h3>
+        <hr style="margin: 10px 0; border: none; border-top: 2px dashed var(--border-color);">
+        <div class="flex-between" style="text-align: center;">
+          <div>
+            <div style="font-size: 1.4rem; font-weight: 900;">09:00</div>
+            <div class="text-muted">出發地點</div>
+          </div>
+          <div style="font-weight: 700; color: var(--primary-coral);">➔ 4h 10m ➔</div>
+          <div>
+            <div style="font-size: 1.4rem; font-weight: 900;">13:10</div>
+            <div class="text-muted">關西國際機場 (KIX)</div>
+          </div>
+        </div>
+        <div style="margin-top: 14px; font-size: 0.85rem; background: var(--badge-bg); padding: 8px; border-radius: 8px;">
+          🧳 <b>行李資訊：</b> 含托運行李與手提行李 (待確認額度)<br>
+          📌 <b>備註：</b> 請提前於 06:30 前抵達機場辦理登機。
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="flex-between" style="margin-bottom: 8px;">
+          <span class="tag tag-food">回程航班</span>
+          <span style="font-weight: 700;">2027/02/02 (二)</span>
+        </div>
+        <h3 style="font-size: 1.2rem;">亞洲航空 AirAsia</h3>
+        <hr style="margin: 10px 0; border: none; border-top: 2px dashed var(--border-color);">
+        <div class="flex-between" style="text-align: center;">
+          <div>
+            <div style="font-size: 1.4rem; font-weight: 900;">14:10</div>
+            <div class="text-muted">關西國際機場 (KIX)</div>
+          </div>
+          <div style="font-weight: 700; color: var(--primary-coral);">➔ 3h 20m ➔</div>
+          <div>
+            <div style="font-size: 1.4rem; font-weight: 900;">16:30</div>
+            <div class="text-muted">抵達台灣</div>
+          </div>
+        </div>
+        <div style="margin-top: 14px; font-size: 0.85rem; background: var(--badge-bg); padding: 8px; border-radius: 8px;">
+          🧳 <b>行李資訊：</b> 含托運行李<br>
+          📌 <b>備註：</b> 關西機場第一航廈搭機，最後採買記得注意時間。
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 每日行程 -->
+    <section id="page-itinerary" class="page">
+      <h2>🗓️ 每日行程</h2>
+      <div class="day-selector" id="daySelector" style="margin-top: 10px;"></div>
+      <div id="itineraryContainer"></div>
+    </section>
+
+    <!-- 4. 備用資料庫 -->
+    <section id="page-backup" class="page">
+      <h2>📚 備用資料庫</h2>
+      <div class="sub-tabs">
+        <button class="sub-tab-btn active" onclick="switchSubTab('spot')">🏞️ 景點</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('food')">🍱 餐廳</button>
+        <button class="sub-tab-btn" onclick="switchSubTab('shop')">🛍️ 購物</button>
+      </div>
+
+      <!-- 新增備用資料表單 -->
+      <div class="card" style="margin-bottom: 16px;">
+        <h3>➕ 新增自訂店家/景點</h3>
+        <form id="backupForm" onsubmit="addBackupItem(event)" style="margin-top: 10px;">
+          <div class="form-group">
+            <label>名稱</label>
+            <input type="text" id="backupTitle" class="form-control" placeholder="例如：心齋橋 HARBS 蛋糕" required>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <div class="form-group" style="flex: 1;">
+              <label>分類</label>
+              <select id="backupCategory" class="form-control">
+                <option value="spot">🏞️ 景點</option>
+                <option value="food">🍱 餐廳</option>
+                <option value="shop">🛍️ 購物</option>
+              </select>
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label>預估停留 / 門票 / 價格</label>
+              <input type="text" id="backupMeta" class="form-control" placeholder="例: 約 1,500 日圓 / 1小時">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>簡介與推薦重點</label>
+            <input type="text" id="backupDesc" class="form-control" placeholder="例如：水果千層蛋糕超有名，建議下午三點前去" required>
+          </div>
+          <div class="form-group">
+            <label>Google Maps 搜尋或地圖連結 (選填)</label>
+            <input type="url" id="backupMap" class="form-control" placeholder="https://maps.google.com/...">
+          </div>
+          <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 4px;">新增至備用資料庫</button>
+        </form>
+      </div>
+
+      <div id="subTabContent"></div>
+    </section>
+
+    <!-- 5. 記帳系統 -->
+    <section id="page-accounting" class="page">
+      <h2>💰 旅行記帳系統</h2>
+      <p class="text-muted" style="margin-bottom: 10px;">離線本機儲存，隨時掌握旅遊開支</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="text-muted">TWD 總支出</div>
+          <div class="stat-val" id="totalTWD">NT$ 0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-title text-muted">JPY 總支出</div>
+          <div class="stat-val" id="totalJPY">¥ 0</div>
+        </div>
+      </div>
+
+      <!-- 新增費用卡片 -->
+      <div class="card">
+        <h3>➕ 新增消費紀錄</h3>
+        <form id="expenseForm" onsubmit="addExpense(event)" style="margin-top: 10px;">
+          <div class="form-group">
+            <label>項目名稱</label>
+            <input type="text" id="expName" class="form-control" placeholder="例如：一蘭拉麵" required>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <div class="form-group" style="flex: 1;">
+              <label>金額</label>
+              <input type="number" id="expAmount" class="form-control" placeholder="0" required min="0" step="any">
+            </div>
+            <div class="form-group" style="width: 100px;">
+              <label>幣別</label>
+              <select id="expCurrency" class="form-control">
+                <option value="JPY">JPY (¥)</option>
+                <option value="TWD">TWD ($)</option>
+              </select>
+            </div>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <div class="form-group" style="flex: 1;">
+              <label>分類</label>
+              <select id="expCategory" class="form-control">
+                <option value="餐飲">🍱 餐飲</option>
+                <option value="交通">🚃 交通</option>
+                <option value="購物">🛍️ 購物</option>
+                <option value="景點門票">🎟️ 景點門票</option>
+                <option value="住宿">🏨 住宿</option>
+                <option value="機票">✈️ 機票</option>
+                <option value="其他">💡 其他</option>
+              </select>
+            </div>
+            <div class="form-group" style="flex: 1;">
+              <label>付款狀態</label>
+              <select id="expStatus" class="form-control">
+                <option value="已付款">✅ 已付款</option>
+                <option value="尚未付款">⏳ 尚未付款</option>
+                <option value="待確認">❓ 待確認</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>日期</label>
+            <input type="date" id="expDate" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-accent" style="width: 100%; margin-top: 6px;">加入記帳</button>
+        </form>
+      </div>
+
+      <!-- 記帳明細列表 -->
+      <div class="card">
+        <div class="flex-between" style="margin-bottom: 10px;">
+          <h3>📋 消費明細</h3>
+          <button class="btn btn-sm btn-secondary" onclick="exportExpensesCSV()">匯出 CSV</button>
+        </div>
+        <div id="expenseList"></div>
+      </div>
+    </section>
+
+    <!-- 6. 住宿資訊 -->
+    <section id="page-hotel" class="page">
+      <h2>🏨 住宿資訊</h2>
+      <div class="card" style="margin-top: 10px;">
+        <span class="tag tag-must">全程入住</span>
+        <h3 style="font-size: 1.3rem; margin: 6px 0;">Hotel Story@Namba by Tabist</h3>
+        <p class="text-muted">📍 大阪府大阪市中央區 (難波周邊，交通方便)</p>
+        
+        <hr style="margin: 12px 0; border: none; border-top: 2px dashed var(--border-color);">
+        
+        <div style="font-size: 0.9rem; line-height: 1.8;">
+          <p>📅 <b>入住日期：</b> 2027/01/27 (三)</p>
+          <p>📅 <b>退房日期：</b> 2027/02/02 (二) (共6晚)</p>
+          <p>⏰ <b>Check-in 時間：</b> 15:00 以後</p>
+          <p>⏰ <b>Check-out 時間：</b> 10:00 以前</p>
+          <p>💵 <b>房價與付款：</b> 待確認 (現場/線上預付)</p>
+          <p>🅿️ <b>停車資訊：</b> 無附設專用停車場，建議利用周邊 Times 費率停車場</p>
+          <p>📌 <b>訂房備註：</b> 9人團體房/多間房分派，請備妥護照辦理入住。</p>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <a href="https://maps.google.com/?q=Hotel+Story+Namba+Tabist" target="_blank" class="btn btn-secondary" style="width: 100%;">🗺️ Google Maps 導航</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. 待辦與購物清單 -->
+    <section id="page-todo" class="page">
+      <h2>✅ 待辦與準備清單</h2>
+      
+      <div class="card" style="margin-top: 10px;">
+        <div class="flex-between">
+          <span>完成進度</span>
+          <span id="todoProgress" style="font-weight: 700; color: var(--primary-coral);">0 / 0</span>
+        </div>
+      </div>
+
+      <!-- 新增自訂項目 -->
+      <div class="card">
+        <div style="display: flex; gap: 8px;">
+          <input type="text" id="newTodoInput" class="form-control" placeholder="新增自訂清單項目...">
+          <select id="newTodoCat" class="form-control" style="width: 110px;">
+            <option value="出國證件">證件</option>
+            <option value="行李準備">行李</option>
+            <option value="交通準備">交通</option>
+            <option value="預約事項">預約</option>
+            <option value="購物清單">購物</option>
+            <option value="其他">其他</option>
+          </select>
+          <button class="btn btn-accent" onclick="addCustomTodo()">新增</button>
+        </div>
+      </div>
+
+      <div id="todoContainer"></div>
+    </section>
+  </main>
+
+  <!-- 景點/店家詳細介紹 Modal -->
+  <div class="modal-backdrop" id="infoModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h3 id="modalTitle" style="margin-bottom: 10px; font-size: 1.3rem;">--</h3>
+      <div id="modalBody" style="font-size: 0.9rem; line-height: 1.7;"></div>
+    </div>
+  </div>
+
+  <!-- Toast 訊息提示條 -->
+  <div id="toast">新增成功！</div>
+
+  <script>
+    /* ==========================================
+       1. 資料庫 (行程、備用景點/餐廳/購物、清單)
+       ========================================== */
+    const ITINERARY_DATA = [
+      {
+        day: 1,
+        date: "01/27 (三)",
+        title: "抵達關西・日本橋與道頓堀巡禮",
+        items: [
+          {
+            time: "13:10",
+            title: "抵達關西國際機場 (KIX)",
+            desc: "辦理入境手續、領取行李與購買交通票券。",
+            transit: "南海電鐵空港急行 (約45分鐘)",
+            duration: "1.5 小時",
+            must: true,
+            info: {
+              feature: "關西入境樞紐，可購買 ICOCA 或關西周遊券。",
+              address: "大阪府泉佐野市泉州空港北1",
+              hours: "24小時",
+              off: "無",
+              ticket: "依乘車區間",
+              stay: "1.5 小時",
+              parking: "機場付費停車場",
+              notice: "入境高峰期人潮較多，請預留辦理手續時間。",
+              web: "https://www.kansai-airport.or.jp/",
+              map: "https://maps.google.com/?q=Kansai+International+Airport"
+            }
+          },
+          {
+            time: "15:30",
+            title: "Hotel Story@Namba 辦理入住",
+            desc: "先至飯店寄放行李，稍作休息整備。",
+            transit: "步行",
+            duration: "30 分鐘",
+            must: true,
+            info: {
+              feature: "鄰近難波與日本橋，購物飲食極為方便。",
+              address: "大阪府大阪市中央區難波周邊",
+              hours: "Check-in 15:00",
+              off: "待確認",
+              ticket: "待確認",
+              stay: "30 分鐘",
+              parking: "無專用停車場",
+              notice: "團體9人辦理入住請準備好所有護照。",
+              web: "待確認",
+              map: "https://maps.google.com/?q=Hotel+Story+Namba+Tabist"
+            }
+          },
+          {
+            time: "16:30",
+            title: "日本橋電器街 & 難波/道頓堀商圈",
+            desc: "大阪動漫聖地日本橋動漫逛街，晚上於道頓堀品嚐美食與拍照打卡跑跑人。",
+            transit: "步行",
+            duration: "3.5 小時",
+            must: true,
+            info: {
+              feature: "動漫公仔店、電器、章魚燒、金龍拉麵、巨型跑跑人看板。",
+              address: "大阪府大阪市中央區道頓堀",
+              hours: "各店家不同 (約11:00-22:00)",
+              off: "無",
+              ticket: "免費逛街",
+              stay: "3-4 小時",
+              parking: "周邊收費停車場",
+              notice: "晚間人潮擁擠，請留意隨身物品與團體走散。",
+              web: "https://dotonbori.or.jp/",
+              map: "https://maps.google.com/?q=Dotonbori"
+            }
+          }
+        ]
+      },
+      {
+        day: 2,
+        date: "01/28 (四)",
+        title: "日本環球影城 (USJ) 夢幻全日遊",
+        items: [
+          {
+            time: "07:30",
+            title: "出發前往 USJ 環球影城",
+            desc: "路線：阪神難波線 ➔ 西九條 ➔ JR櫻島線 ➔ ユニバーサルシティ站",
+            transit: "電車轉乘 (預估 35 分鐘)",
+            duration: "全天",
+            must: true,
+            info: {
+              feature: "世界級主題樂園，包含超級任天堂世界與哈利波特魔法世界。",
+              address: "大阪府大阪市此花區櫻島2丁目1-33",
+              hours: "08:30 - 21:30 (依官網為準)",
+              off: "無休",
+              ticket: "一日券 (價格依日期變動)",
+              stay: "全天",
+              parking: "影城專用停車場",
+              notice: "【重要提醒】驗票進園後請立刻開啟 USJ App 抽取「超級任天堂世界整理券/抽籤券」！禁帶外食與危險物品。",
+              web: "https://www.usj.co.jp/web/zh/tw",
+              map: "https://maps.google.com/?q=Universal+Studios+Japan"
+            }
+          }
+        ]
+      },
+      {
+        day: 3,
+        date: "01/29 (五)",
+        title: "大阪經典名勝與阿倍野落日夕陽",
+        items: [
+          {
+            time: "09:00",
+            title: "大阪城天守閣 & 大阪城公園",
+            desc: "參觀歷史名城，登上天守閣俯瞰大阪市景。",
+            transit: "地鐵谷町線 / 長堀鶴見綠地線",
+            duration: "2.5 小時",
+            must: true,
+            info: {
+              feature: "豐臣秀吉建造的名城，雄偉的天守閣與廣闊公園。",
+              address: "大阪府大阪市中央區大阪城1-1",
+              hours: "09:00 - 17:00",
+              off: "年末年始",
+              ticket: "大人 600 日圓",
+              stay: "2 小時",
+              parking: "公園收費停車場",
+              notice: "天守閣內部參觀需要爬樓梯或搭乘電梯。",
+              web: "https://www.osakacastle.net/",
+              map: "https://maps.google.com/?q=Osaka+Castle"
+            }
+          },
+          {
+            time: "12:30",
+            title: "新世界 & 通天閣 (午餐：串炸)",
+            desc: "感受懷旧昭和風情，享用名物八重勝或天狗串炸。",
+            transit: "地鐵堺筋線",
+            duration: "2 小時",
+            must: true,
+            info: {
+              feature: "昭和復古街區，驚人的巨大看板與通天閣地標。",
+              address: "大阪府大阪市浪速區惠美須東",
+              hours: "街區24小時 (店家約11:00營業)",
+              off: "無",
+              ticket: "通天閣展望台另購門票",
+              stay: "2 小時",
+              parking: "無",
+              notice: "串炸沾醬請遵循「禁止二次沾醬」原則（若為共用醬汁）。",
+              web: "https://www.tsutenkaku.co.jp/",
+              map: "https://maps.google.com/?q=Tsutenkaku"
+            }
+          },
+          {
+            time: "16:30",
+            title: "阿倍野 HARUKAS 300 展望台看夕陽",
+            desc: "日本第一高樓俯瞰絕美夕陽與大阪萬家燈火夜景。",
+            transit: "步行 / 地鐵",
+            duration: "2 小時",
+            must: true,
+            info: {
+              feature: "300公尺高空全景玻璃展望台，極致夕陽夜景觀賞點。",
+              address: "大阪府大阪市阿倍野區阿倍野筋1-1-43",
+              hours: "09:00 - 22:00",
+              off: "無休",
+              ticket: "大人約 1,800 日圓",
+              stay: "2 小時",
+              parking: "近鐵百貨停車場",
+              notice: "建議於日落前30分鐘抵達佔據好拍照位置。",
+              web: "https://www.abenoharukas-300.jp/observatory/",
+              map: "https://maps.google.com/?q=Abeno+Harukas"
+            }
+          }
+        ]
+      },
+      {
+        day: 4,
+        date: "01/30 (六)",
+        title: "京都古都巡禮・金閣寺雪景古韻",
+        items: [
+          {
+            time: "07:30",
+            title: "07:30 前集合出發前往京都",
+            desc: "從難波搭乘 JR 或京阪電車轉乘前往京都金閣寺。",
+            transit: "JR/阪急電車/京都市營公車",
+            duration: "1.5 小時",
+            must: true,
+            info: {
+              feature: "早起避開人潮前往京都經典名勝。",
+              address: "京都府京都市",
+              hours: "--",
+              off: "--",
+              ticket: "交通費約 800-1200日圓",
+              stay: "1.5 小時車程",
+              parking: "--",
+              notice: "冬季京都氣溫較低，注意禦寒保暖。",
+              web: "待確認",
+              map: "https://maps.google.com/?q=Kyoto+Station"
+            }
+          },
+          {
+            time: "09:30",
+            title: "金閣寺 (鹿苑寺) 賞雪景",
+            desc: "欣賞金碧輝煌的舍利殿與鏡湖池倒影（冬季運氣好可見金閣雪景）。",
+            transit: "市營公車 205 / 59",
+            duration: "1.5 小時",
+            must: true,
+            info: {
+              feature: "世界文化遺產，外牆贴滿金箔的金色禪寺。",
+              address: "京都府京都市北區金閣寺町1",
+              hours: "09:00 - 17:00",
+              off: "無休",
+              ticket: "大人 500 日圓",
+              stay: "1 - 1.5 小時",
+              parking: "收費停車場",
+              notice: "寺內單向通行，順著參觀路線前進。",
+              web: "https://www.shokoku-ji.jp/kinkakuji/",
+              map: "https://maps.google.com/?q=Kinkaku-ji"
+            }
+          },
+          {
+            time: "12:30",
+            title: "午餐：和食 NOW JOY 推薦",
+            desc: "品嚐經典京都和食定食與精緻料理。",
+            transit: "公車/步行",
+            duration: "1.5 小時",
+            must: false,
+            info: {
+              feature: "提供豐富日式定食、天婦羅與和牛餐點，適合團體用餐。",
+              address: "京都府京都市內 (待確認分店門市)",
+              hours: "11:00 - 21:00 (待確認)",
+              off: "待確認",
+              ticket: "人均約 1,500 - 3,000 日圓",
+              stay: "1.5 小時",
+              parking: "待確認",
+              notice: "建議提早預約或避開正午用餐尖峰時間。",
+              web: "待確認",
+              map: "https://maps.google.com/?q=Washoku+NOW+JOY+Kyoto"
+            }
+          }
+        ]
+      },
+      {
+        day: 5,
+        date: "01/31 (日)",
+        title: "自由規劃 & 彈性備用行程保留日",
+        items: [
+          {
+            time: "10:00",
+            title: "自由行程 / 彈性規劃日",
+            desc: "可選擇前往神戶港夜景、京都清水寺補完、或於心齋橋爆買購物。",
+            transit: "自行安排電車",
+            duration: "全天",
+            must: false,
+            info: {
+              feature: "彈性保留一日供大家自由分組活動或走備用景點。",
+              address: "關西區域",
+              hours: "--",
+              off: "--",
+              ticket: "--",
+              stay: "全天",
+              parking: "--",
+              notice: "請注意夜晚集合時間與安全。",
+              web: "--",
+              map: "https://maps.google.com/?q=Osaka"
+            }
+          }
+        ]
+      },
+      {
+        day: 6,
+        date: "02/01 (一)",
+        title: "勝尾寺勝運達摩 & 梅田地下街 Shopping",
+        items: [
+          {
+            time: "09:00",
+            title: "勝尾寺 (勝運達摩神社)",
+            desc: "滿山遍野的可愛勝運達摩不倒翁，祈求勝運與平安。",
+            transit: "地鐵御堂筋線 ➔ 北千里/千里中央 ➔ 阪急巴士",
+            duration: "3 小時",
+            must: true,
+            info: {
+              feature: "祈求勝運的名剎，寺內擺滿無數信徒留下的達摩不倒翁。",
+              address: "大阪府箕面市勝尾寺",
+              hours: "08:00 - 17:00",
+              off: "無休",
+              ticket: "大人 500 日圓",
+              stay: "2 小時",
+              parking: "專屬收費停車場",
+              notice: "山上公車班次較少，請務必先確認來回公車時刻表。",
+              web: "https://katsuo-ji-temple.or.jp/",
+              map: "https://maps.google.com/?q=Katsuoji"
+            }
+          },
+          {
+            time: "14:00",
+            title: "梅田地下街商圈 & Grand Front Osaka Shopping",
+            desc: "日本最大規模地下街與梅田百貨大樓採買體驗。",
+            transit: "阪急/地鐵梅田站",
+            duration: "4 小時",
+            must: true,
+            info: {
+              feature: "結合百貨、美食、藥妝、時尚服飾的超級巨大購物迷宮。",
+              address: "大阪府大阪市北區梅田",
+              hours: "10:00 - 21:00",
+              off: "無休",
+              ticket: "免費逛街",
+              stay: "3-5 小時",
+              parking: "百貨聯營停車場",
+              notice: "梅田地下街極易迷路，建議認明指標或走地面道路。",
+              web: "https://www.grandfront-osaka.jp/",
+              map: "https://maps.google.com/?q=Umeda+Station"
+            }
+          }
+        ]
+      },
+      {
+        day: 7,
+        date: "02/02 (二)",
+        title: "退房・臨空城 Outlet 購物與返台",
+        items: [
+          {
+            time: "10:00",
+            title: "退房 & 前往臨空城 Outlet (SEACLE)",
+            desc: "搭乘南海電鐵至臨空城站，於 SEACLE 或 Outlet 寄放大型行李。",
+            transit: "南海電鐵 (難波 ➔ 臨空城)",
+            duration: "1.5 小時",
+            must: true,
+            info: {
+              feature: "關西機場前一站，大型 Outlet 與購物中心，適合最後採買。",
+              address: "大阪府泉佐野市臨空往來南3-28",
+              hours: "10:00 - 20:00",
+              off: "無休",
+              ticket: "免費",
+              stay: "3 小時",
+              parking: "大型收費停車場",
+              notice: "先去寄物櫃或服務中心寄存行李，以免拖行李逛街不便。",
+              web: "https://www.premiumoutlets.co.jp/rinku/",
+              map: "https://maps.google.com/?q=Rinku+Premium+Outlets"
+            }
+          },
+          {
+            time: "12:00",
+            title: "自由選擇：方案 A 或 方案 B",
+            desc: "【方案A】臨空公園與 LOVE RINKU 裝置藝術拍照看海。\n【方案B】大國藥妝 & 100日圓店 Seria 補貨採買。",
+            transit: "步行",
+            duration: "1.5 小時",
+            must: false,
+            info: {
+              feature: "方案A適合放鬆海景拍照；方案B適合補齊藥妝生活雜貨。",
+              address: "臨空城車站周邊",
+              hours: "各店不同",
+              off: "無",
+              ticket: "免費",
+              stay: "1.5 小時",
+              parking: "周邊停車場",
+              notice: "注意拿捏時間，需於 12:40 前準備往機場搭機。",
+              web: "待確認",
+              map: "https://maps.google.com/?q=Rinku+Park"
+            }
+          },
+          {
+            time: "14:10",
+            title: "搭乘南海電鐵/JR接駁至關西機場 1 航廈搭機返台",
+            desc: "搭機返回台灣，結束愉快的大阪 7 天之旅！",
+            transit: "南海電鐵 / JR (臨空城 ➔ 關西機場)",
+            duration: "10 分鐘車程",
+            must: true,
+            info: {
+              feature: "辦理出境登機、免稅店採買伴手禮 (白色戀人、Royce巧克力)。",
+              address: "關西國際機場 1航廈",
+              hours: "24小時",
+              off: "無",
+              ticket: "機票",
+              stay: "2 小時",
+              parking: "機場停車場",
+              notice: "手提行李液體限制請遵守 100ml 規定。",
+              web: "https://www.kansai-airport.or.jp/",
+              map: "https://maps.google.com/?q=Kansai+Airport+Terminal+1"
+            }
+          }
+        ]
+      }
+    ];
+
+    const BACKUP_DATABASE = {
+      spot: [
+        {
+          id: 'def-spot-1',
+          title: "奈良公園 & 春日大社 (備用)",
+          desc: "看可愛小鹿與千年古木森林。",
+          address: "奈良縣奈良市雜司町",
+          hours: "24小時開放",
+          off: "無",
+          ticket: "免費 (餵鹿仙貝約 200 日圓)",
+          stay: "2-3 小時",
+          parking: "周邊收費停車場",
+          notice: "請注意手上的紙張與地圖不要被小鹿吃掉。",
+          web: "https://nara-park.com/",
+          map: "https://maps.google.com/?q=Nara+Park"
+        },
+        {
+          id: 'def-spot-2',
+          title: "京都伏見稻荷大社 (備用)",
+          desc: "綿延不絕的千本鳥居奇景。",
+          address: "京都府京都市伏見區深草藪之內町68",
+          hours: "24小時開放",
+          off: "無",
+          ticket: "免費",
+          stay: "2 小時",
+          parking: "參拜者停車場",
+          notice: "越往山頂走人潮越少，但階梯較多需穿舒適鞋子。",
+          web: "http://inari.jp/",
+          map: "https://maps.google.com/?q=Fushimi+Inari+Taisha"
+        }
+      ],
+      food: [
+        {
+          id: 'def-food-1',
+          title: "八重勝 串炸 (新世界)",
+          desc: "新世界超高人氣排隊串炸老店，麵衣酥脆不油膩。",
+          address: "大阪府大阪市浪速區惠美須東3-4-13",
+          hours: "10:30 - 20:00",
+          off: "每週四",
+          dish: "炸牛串、炸蝦、炸半熟蛋",
+          menu: "串炸單支約 150-300 日圓",
+          price: "人均約 1,500 - 2,500 日圓",
+          reserve: "否 (現場排隊)",
+          parking: "無",
+          web: "https://tabelog.com/osaka/A2701/A270206/27000443/",
+          map: "https://maps.google.com/?q=Yaekatsu+Osaka"
+        },
+        {
+          id: 'def-food-2',
+          title: "和食 NOW JOY (京都)",
+          desc: "行程第4天推薦之京都經典和食料理。",
+          address: "京都府京都市內 (待確認門市)",
+          hours: "11:00 - 21:00",
+          off: "待確認",
+          dish: "天婦羅定食、和牛壽喜燒、日式便當",
+          menu: "多種日式套餐選擇",
+          price: "人均 1,500 - 3,000 日圓",
+          reserve: "建議預約",
+          parking: "待確認",
+          web: "待確認",
+          map: "https://maps.google.com/?q=Washoku+NOW+JOY"
+        }
+      ],
+      shop: [
+        {
+          id: 'def-shop-1',
+          title: "大國藥妝 (難波/臨空城)",
+          desc: "日本知名連鎖藥妝店，常有超值折扣與免稅服務。",
+          address: "大阪各主要商圈均有分店",
+          hours: "10:00 - 22:00 (依門市而定)",
+          info: "合利他命、EVE止痛藥、面膜、日系零食必買。",
+          map: "https://maps.google.com/?q=Daikoku+Drug+Osaka"
+        },
+        {
+          id: 'def-shop-2',
+          title: "Seria 100日圓店 (臨空城 SEACLE 店)",
+          desc: "精緻日式質感 100 日元生活雜貨與文具小物。",
+          address: "大阪府泉佐野市臨空往來南3",
+          hours: "10:00 - 20:00",
+          info: "日系可愛餐具、收納盒、手作小飾品。",
+          map: "https://maps.google.com/?q=Seria+Rinku"
+        }
+      ]
+    };
+
+    const DEFAULT_TODOS = [
+      { id: 1, text: "護照正本 (有效期6個月以上)", cat: "出國證件", done: false },
+      { id: 2, text: " Visit Japan Web 填寫入境與海關申報", cat: "出國證件", done: false },
+      { id: 3, text: "網卡 / Wi-Fi 分享器開通設定", cat: "交通準備", done: false },
+      { id: 4, text: "日圓現金 (建議準備 3-5 萬日圓現鈔)", cat: "出國證件", done: false },
+      { id: 5, text: "日本環球影城 (USJ) 電子門票下載", cat: "預約事項", done: false },
+      { id: 6, text: "保暖衣物/發熱衣/毛帽/手套 (1月氣溫低)", cat: "行李準備", done: false },
+      { id: 7, text: "個人常用藥品 / 暈車藥", cat: "行李準備", done: false },
+      { id: 8, text: "合利他命 & 藥妝清單確認", cat: "購物清單", done: false }
+    ];
+
+    /* ==========================================
+       2. 狀態管理與 localStorage
+       ========================================== */
+    let currentDay = 1;
+    let currentSubTab = 'spot';
+    let expenses = JSON.parse(localStorage.getItem('osaka_expenses')) || [];
+    let todos = JSON.parse(localStorage.getItem('osaka_todos')) || DEFAULT_TODOS;
+    let customBackup = JSON.parse(localStorage.getItem('osaka_custom_backup')) || { spot: [], food: [], shop: [] };
+
+    /* 初始化 */
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      updateCountdown();
+      renderDaySelector();
+      renderItinerary(1);
+      renderSubTabContent();
+      renderExpenses();
+      renderTodos();
+
+      const dateInput = document.getElementById('expDate');
+      if (dateInput) dateInput.value = "2027-01-27";
+    });
+
+    /* 主題切換 (localStorage) */
+    function initTheme() {
+      const savedTheme = localStorage.getItem('osaka_theme');
+      if (savedTheme) {
+        document.documentElement.className = savedTheme;
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.className = 'dark';
+      }
+      updateThemeIcon();
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains('dark')) {
+        html.className = 'light';
+        localStorage.setItem('osaka_theme', 'light');
+      } else {
+        html.className = 'dark';
+        localStorage.setItem('osaka_theme', 'dark');
+      }
+      updateThemeIcon();
+    }
+
+    function updateThemeIcon() {
+      const isDark = document.documentElement.classList.contains('dark');
+      document.getElementById('themeIcon').textContent = isDark ? '🌙' : '☀️';
+    }
+
+    /* 倒數計時 */
+    function updateCountdown() {
+      const targetDate = new Date('2027-01-27T00:00:00');
+      const now = new Date();
+      const diffTime = targetDate - now;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      const countEl = document.getElementById('countdown');
+      if (diffDays > 0) {
+        countEl.textContent = `${diffDays} 天`;
+      } else if (diffDays === 0) {
+        countEl.textContent = `今天出發！ 🎉`;
+      } else {
+        countEl.textContent = `旅行進行中 / 已結束 ✈️`;
+      }
+    }
+
+    /* 分頁切換 */
+    function switchPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+      
+      const targetPage = document.getElementById(`page-${pageId}`);
+      if (targetPage) targetPage.classList.add('active');
+
+      const navBtns = document.querySelectorAll('.nav-btn');
+      const navMap = ['home', 'flight', 'itinerary', 'backup', 'accounting', 'hotel', 'todo'];
+      const index = navMap.indexOf(pageId);
+      if (index !== -1 && navBtns[index]) {
+        navBtns[index].classList.add('active');
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* 每日行程渲染 */
+    function renderDaySelector() {
+      const selector = document.getElementById('daySelector');
+      selector.innerHTML = '';
+      ITINERARY_DATA.forEach(d => {
+        const btn = document.createElement('button');
+        btn.className = `day-btn ${d.day === currentDay ? 'active' : ''}`;
+        btn.textContent = `DAY ${d.day}｜${d.date.split(' ')[0]}`;
+        btn.onclick = () => {
+          currentDay = d.day;
+          renderDaySelector();
+          renderItinerary(d.day);
+        };
+        selector.appendChild(btn);
+      });
+    }
+
+    function renderItinerary(day) {
+      const container = document.getElementById('itineraryContainer');
+      const dayData = ITINERARY_DATA.find(d => d.day === day);
+      if (!dayData) return;
+
+      let html = `<div class="card" style="background: var(--badge-bg);"><h3 style="font-size: 1.1rem;">DAY ${dayData.day} - ${dayData.title}</h3></div>`;
+      
+      dayData.items.forEach(item => {
+        html += `
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-time">${item.time}</div>
+            <div class="timeline-title">${item.title}</div>
+            <p style="font-size: 0.9rem; margin-bottom: 6px;">${item.desc}</p>
+            <div style="margin-bottom: 8px;">
+              <span class="tag tag-transit">🚃 ${item.transit}</span>
+              <span class="tag tag-spot">⏱️ 停留: ${item.duration}</span>
+              ${item.must ? '<span class="tag tag-must">⭐ 必去行程</span>' : ''}
+            </div>
+            <div style="display: flex; gap: 8px; margin-top: 8px;">
+              <button class="btn btn-sm btn-accent" onclick='openModal(${JSON.stringify(item.title)}, ${JSON.stringify(item.info)})'>📖 詳細介紹</button>
+              <a href="${item.info.map}" target="_blank" class="btn btn-sm btn-secondary">🗺️ 導航</a>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    /* 備用資料庫分類切換與渲染 */
+    function switchSubTab(type) {
+      currentSubTab = type;
+      document.querySelectorAll('.sub-tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      renderSubTabContent();
+    }
+
+    function renderSubTabContent() {
+      const container = document.getElementById('subTabContent');
+      let html = '';
+
+      const allSpots = [...BACKUP_DATABASE.spot, ...customBackup.spot];
+      const allFoods = [...BACKUP_DATABASE.food, ...customBackup.food];
+      const allShops = [...BACKUP_DATABASE.shop, ...customBackup.shop];
+
+      if (currentSubTab === 'spot') {
+        if (allSpots.length === 0) {
+          html = '<p class="text-muted" style="text-align:center; padding:20px;">目前尚無備用景點</p>';
+        } else {
+          allSpots.forEach(item => {
+            const mapUrl = item.map || `https://maps.google.com/?q=${encodeURIComponent(item.title)}`;
+            html += `
+              <div class="card">
+                <div class="flex-between">
+                  <h3>🏞️ ${escapeHtml(item.title)}</h3>
+                  <button class="btn btn-sm btn-danger" onclick="deleteBackupItem('spot', '${item.id}')">🗑️ 刪除</button>
+                </div>
+                <p style="font-size: 0.9rem; margin: 6px 0;">${escapeHtml(item.desc)}</p>
+                <div style="margin-bottom: 8px;">
+                  ${item.ticket ? `<span class="tag tag-spot">門票: ${escapeHtml(item.ticket)}</span>` : ''}
+                  ${item.stay ? `<span class="tag tag-transit">停留: ${escapeHtml(item.stay)}</span>` : ''}
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 8px;">
+                  <button class="btn btn-sm btn-accent" onclick='openModal(${JSON.stringify(item.title)}, ${JSON.stringify(item)})'>📖 詳細資料</button>
+                  <a href="${mapUrl}" target="_blank" class="btn btn-sm btn-secondary">🗺️ 導航</a>
+                </div>
+              </div>
+            `;
+          });
+        }
+      } else if (currentSubTab === 'food') {
+        if (allFoods.length === 0) {
+          html = '<p class="text-muted" style="text-align:center; padding:20px;">目前尚無備用餐廳</p>';
+        } else {
+          allFoods.forEach(item => {
+            const mapUrl = item.map || `https://maps.google.com/?q=${encodeURIComponent(item.title)}`;
+            html += `
+              <div class="card">
+                <div class="flex-between">
+                  <h3>🍱 ${escapeHtml(item.title)}</h3>
+                  <button class="btn btn-sm btn-danger" onclick="deleteBackupItem('food', '${item.id}')">🗑️ 刪除</button>
+                </div>
+                <p style="font-size: 0.9rem; margin: 6px 0;">${escapeHtml(item.desc)}</p>
+                ${item.dish ? `<p style="font-size: 0.85rem; color: var(--primary-coral); font-weight: 700;">招牌菜: ${escapeHtml(item.dish)}</p>` : ''}
+                <div style="margin: 8px 0;">
+                  ${item.price ? `<span class="tag tag-food">預算: ${escapeHtml(item.price)}</span>` : ''}
+                  ${item.reserve ? `<span class="tag tag-must">預約: ${escapeHtml(item.reserve)}</span>` : ''}
+                </div>
+                <div style="display: flex; gap: 8px; margin-top: 8px;">
+                  <button class="btn btn-sm btn-accent" onclick='openModal(${JSON.stringify(item.title)}, ${JSON.stringify(item)})'>📖 菜單與細節</button>
+                  <a href="${mapUrl}" target="_blank" class="btn btn-sm btn-secondary">🗺️ 導航</a>
+                </div>
+              </div>
+            `;
+          });
+        }
+      } else if (currentSubTab === 'shop') {
+        if (allShops.length === 0) {
+          html = '<p class="text-muted" style="text-align:center; padding:20px;">目前尚無備用購物地點</p>';
+        } else {
+          allShops.forEach(item => {
+            const mapUrl = item.map || `https://maps.google.com/?q=${encodeURIComponent(item.title)}`;
+            html += `
+              <div class="card">
+                <div class="flex-between">
+                  <h3>🛍️ ${escapeHtml(item.title)}</h3>
+                  <button class="btn btn-sm btn-danger" onclick="deleteBackupItem('shop', '${item.id}')">🗑️ 刪除</button>
+                </div>
+                <p style="font-size: 0.9rem; margin: 6px 0;">${escapeHtml(item.desc)}</p>
+                ${item.info ? `<p style="font-size: 0.85rem; background: var(--badge-bg); padding: 6px; border-radius: 6px;">💡 推薦買點: ${escapeHtml(item.info)}</p>` : ''}
+                <div style="margin-top: 10px;">
+                  <a href="${mapUrl}" target="_blank" class="btn btn-sm btn-secondary">🗺️ 導航地點</a>
+                </div>
+              </div>
+            `;
+          });
+        }
+      }
+
+      container.innerHTML = html;
+    }
+
+    /* 新增與刪除備用資料 */
+    function addBackupItem(e) {
+      e.preventDefault();
+      const title = document.getElementById('backupTitle').value.trim();
+      const cat = document.getElementById('backupCategory').value;
+      const meta = document.getElementById('backupMeta').value.trim();
+      const desc = document.getElementById('backupDesc').value.trim();
+      let map = document.getElementById('backupMap').value.trim();
+
+      if (!title || !desc) return;
+
+      if (!map) {
+        map = `https://maps.google.com/?q=${encodeURIComponent(title)}`;
+      }
+
+      const newItem = {
+        id: 'cust-' + Date.now(),
+        isCustom: true,
+        title,
+        desc,
+        map,
+        ticket: cat === 'spot' ? meta : undefined,
+        stay: cat === 'spot' ? meta : undefined,
+        price: cat === 'food' ? meta : undefined,
+        info: cat === 'shop' ? meta : undefined,
+        reserve: '待確認'
+      };
+
+      customBackup[cat].unshift(newItem);
+      localStorage.setItem('osaka_custom_backup', JSON.stringify(customBackup));
+
+      currentSubTab = cat;
+      const tabs = document.querySelectorAll('.sub-tab-btn');
+      tabs.forEach(btn => btn.classList.remove('active'));
+      const catIndex = ['spot', 'food', 'shop'].indexOf(cat);
+      if (tabs[catIndex]) tabs[catIndex].classList.add('active');
+
+      renderSubTabContent();
+      document.getElementById('backupForm').reset();
+      showToast('已新增至備用資料庫！');
+    }
+
+    function deleteBackupItem(cat, id) {
+      // 判斷是預設資料還是自訂資料
+      if (id.startsWith('def-')) {
+        BACKUP_DATABASE[cat] = BACKUP_DATABASE[cat].filter(item => item.id !== id);
+      } else {
+        customBackup[cat] = customBackup[cat].filter(item => item.id !== id);
+        localStorage.setItem('osaka_custom_backup', JSON.stringify(customBackup));
+      }
+      renderSubTabContent();
+      showToast('已刪除該項目');
+    }
+
+    /* Modal 控制 */
+    function openModal(title, infoObj) {
+      document.getElementById('modalTitle').textContent = title;
+      const body = document.getElementById('modalBody');
+      
+      let contentHtml = '';
+      if (typeof infoObj === 'object') {
+        if (infoObj.feature) contentHtml += `<p>🌟 <b>特色：</b> ${infoObj.feature}</p>`;
+        if (infoObj.address) contentHtml += `<p>📍 <b>地址：</b> ${infoObj.address}</p>`;
+        if (infoObj.hours) contentHtml += `<p>⏰ <b>營業時間：</b> ${infoObj.hours}</p>`;
+        if (infoObj.off) contentHtml += `<p>📅 <b>公休日：</b> ${infoObj.off}</p>`;
+        if (infoObj.dish) contentHtml += `<p>🥢 <b>招牌料理：</b> ${infoObj.dish}</p>`;
+        if (infoObj.menu) contentHtml += `<p>📜 <b>菜單參考：</b> ${infoObj.menu}</p>`;
+        if (infoObj.price) contentHtml += `<p>💰 <b>價格資訊：</b> ${infoObj.price}</p>`;
+        if (infoObj.ticket) contentHtml += `<p>🎟️ <b>門票價格：</b> ${infoObj.ticket}</p>`;
+        if (infoObj.stay) contentHtml += `<p>⏱️ <b>建議停留：</b> ${infoObj.stay}</p>`;
+        if (infoObj.parking) contentHtml += `<p>🅿️ <b>停車資訊：</b> ${infoObj.parking}</p>`;
+        if (infoObj.notice) contentHtml += `<p style="color:var(--primary-coral); margin-top:6px;">⚠️ <b>注意事項：</b> ${infoObj.notice}</p>`;
+        if (infoObj.web && infoObj.web !== '待確認' && infoObj.web !== '--') {
+          contentHtml += `<p style="margin-top:10px;"><a href="${infoObj.web}" target="_blank" class="btn btn-sm btn-accent">🌐 官方網站 / Tabelog</a></p>`;
+        }
+      } else {
+        contentHtml = `<p>${infoObj}</p>`;
+      }
+
+      body.innerHTML = contentHtml;
+      document.getElementById('infoModal').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('infoModal').classList.remove('open');
+    }
+
+    /* ==========================================
+       3. 記帳邏輯 (新增與刪除)
+       ========================================== */
+    function addExpense(e) {
+      e.preventDefault();
+      const name = document.getElementById('expName').value;
+      const amount = parseFloat(document.getElementById('expAmount').value);
+      const currency = document.getElementById('expCurrency').value;
+      const category = document.getElementById('expCategory').value;
+      const status = document.getElementById('expStatus').value;
+      const date = document.getElementById('expDate').value;
+
+      if (!name || isNaN(amount)) return;
+
+      const newItem = {
+        id: Date.now(),
+        name,
+        amount,
+        currency,
+        category,
+        status,
+        date
+      };
+
+      expenses.unshift(newItem);
+      saveExpenses();
+      renderExpenses();
+
+      document.getElementById('expenseForm').reset();
+      document.getElementById('expDate').value = date;
+      showToast('記帳成功！');
+    }
+
+    function deleteExpense(id) {
+      expenses = expenses.filter(item => item.id !== id);
+      saveExpenses();
+      renderExpenses();
+      showToast('已刪除消費紀錄');
+    }
+
+    function saveExpenses() {
+      localStorage.setItem('osaka_expenses', JSON.stringify(expenses));
+    }
+
+    function renderExpenses() {
+      const listContainer = document.getElementById('expenseList');
+      const totalTWDEl = document.getElementById('totalTWD');
+      const totalJPYEl = document.getElementById('totalJPY');
+
+      let sumTWD = 0;
+      let sumJPY = 0;
+
+      if (expenses.length === 0) {
+        listContainer.innerHTML = '<p class="text-muted" style="text-align:center; padding:20px;">尚無消費紀錄，開始新增吧！</p>';
+      } else {
+        let html = '';
+        expenses.forEach(item => {
+          if (item.currency === 'TWD') sumTWD += item.amount;
+          if (item.currency === 'JPY') sumJPY += item.amount;
+
+          html += `
+            <div class="flex-between" style="padding: 10px 0; border-bottom: 1px dashed var(--border-color);">
+              <div>
+                <div style="font-weight: 700;">${escapeHtml(item.name)}</div>
+                <div class="text-muted">${item.date}｜${item.category}｜<span style="color:var(--primary-coral);">${item.status}</span></div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-weight: 900; font-size: 1.05rem;">${item.currency === 'JPY' ? '¥' : 'NT$'} ${item.amount.toLocaleString()}</div>
+                <button class="btn btn-sm btn-danger" onclick="deleteExpense(${item.id})" style="margin-top:2px;">🗑️ 刪除</button>
+              </div>
+            </div>
+          `;
+        });
+        listContainer.innerHTML = html;
+      }
+
+      totalTWDEl.textContent = `NT$ ${sumTWD.toLocaleString()}`;
+      totalJPYEl.textContent = `¥ ${sumJPY.toLocaleString()}`;
+    }
+
+    function exportExpensesCSV() {
+      if (expenses.length === 0) {
+        showToast('尚無資料可匯出');
+        return;
+      }
+      let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+      csvContent += "日期,名稱,分類,幣別,金額,付款狀態\n";
+      
+      expenses.forEach(e => {
+        csvContent += `"${e.date}","${e.name}","${e.category}","${e.currency}",${e.amount},"${e.status}"\n`;
+      });
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "大阪旅遊記帳明細.csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    /* ==========================================
+       4. 待辦清單邏輯
+       ========================================== */
+    function renderTodos() {
+      const container = document.getElementById('todoContainer');
+      const categories = ['出國證件', '行李準備', '交通準備', '預約事項', '購物清單', '其他'];
+      
+      let html = '';
+      let totalCount = todos.length;
+      let completedCount = todos.filter(t => t.done).length;
+
+      categories.forEach(cat => {
+        const catTodos = todos.filter(t => t.cat === cat);
+        if (catTodos.length > 0) {
+          html += `<div class="card" style="padding:14px; margin-bottom:12px;"><h4 style="margin-bottom:8px;">📌 ${cat}</h4>`;
+          catTodos.forEach(item => {
+            html += `
+              <div class="todo-item ${item.done ? 'completed' : ''}">
+                <input type="checkbox" id="todo-${item.id}" ${item.done ? 'checked' : ''} onchange="toggleTodo(${item.id})">
+                <label for="todo-${item.id}" style="flex:1; cursor:pointer;">${escapeHtml(item.text)}</label>
+                <button class="btn btn-sm btn-danger" onclick="deleteTodo(${item.id})" style="margin-left: 6px;">🗑️ 刪除</button>
+              </div>
+            `;
+          });
+          html += `</div>`;
+        }
+      });
+
+      container.innerHTML = html;
+      document.getElementById('todoProgress').textContent = `${completedCount} / ${totalCount}`;
+    }
+
+    function toggleTodo(id) {
+      const todo = todos.find(t => t.id === id);
+      if (todo) {
+        todo.done = !todo.done;
+        saveTodos();
+        renderTodos();
+      }
+    }
+
+    function addCustomTodo() {
+      const input = document.getElementById('newTodoInput');
+      const catSelect = document.getElementById('newTodoCat');
+      const text = input.value.trim();
+
+      if (!text) return;
+
+      const newTodo = {
+        id: Date.now(),
+        text: text,
+        cat: catSelect.value,
+        done: false
+      };
+
+      todos.push(newTodo);
+      saveTodos();
+      renderTodos();
+      input.value = '';
+      showToast('已新增清單項目');
+    }
+
+    function deleteTodo(id) {
+      todos = todos.filter(t => t.id !== id);
+      saveTodos();
+      renderTodos();
+      showToast('已刪除清單項目');
+    }
+
+    function saveTodos() {
+      localStorage.setItem('osaka_todos', JSON.stringify(todos));
+    }
+
+    /* 工具函式 */
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, function(m) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#039;'
+        }[m];
+      });
+    }
+  </script>
+</body>
+</html>
